@@ -1,0 +1,45 @@
+[project]
+name = "jot"
+version = "0.0.1"
+description = "Dead-simple command-line app for taking timestamped notes"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+jot = "jot.main:main"
+
+[build-system]
+requires = ["uv_build>=0.12.8,<0.13"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.2",
+    "pytest-cov>=7.1.0",
+    "pytest-mock>=3.15.1",
+    "pytest-random-order>=1.2.0",
+    "ruff>=0.15.8",
+    "setuptools>=82.0.1",
+    "ty>=0.0.26",
+]
+
+[tool.ruff]
+line-length = 79
+
+[tool.ruff.lint]
+extend-select = [
+    "B", # bugbear
+    "I", # isort
+    "C4", # comprehensions
+    "ERA", # eradicate
+]
+
+[tool.pytest.ini_options]
+testpaths = "tests"
+addopts = [
+    "--durations=5",
+    "--cov=src/jot",
+    "--cov-branch",
+    "--random-order",
+]

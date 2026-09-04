@@ -1,17 +1,17 @@
-# Jot
-Jot is a dead-simple command-line app for taking timestamped notes. Specify a file,
+# Jotty
+Jotty is a dead-simple command-line app for taking timestamped notes. Specify a file,
 start the app, and write them as they come. Every note is appended to the file
 with the current local date and time prepended as soon as you press <kbd>Enter</kbd>.
 This is pretty much all it does.
 
 ## How to install it?
 ```shell
-uv tool install git+ssh://git@github.com/r73m/jot.git
+uv tool install git+ssh://git@github.com/r73m/jotty.git
 ```
 
 ## How to run it?
 ```shell
-jot notes.txt
+jotty notes.txt
 ```
 If the specified file doesn't exist, it will be created; if it does, appended to
 

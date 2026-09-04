@@ -1,5 +1,5 @@
 [project]
-name = "jot"
+name = "jotty"
 version = "0.0.1"
 description = "Dead-simple command-line app for taking timestamped notes"
 readme = "README.md"
@@ -7,7 +7,7 @@ requires-python = ">=3.9"
 dependencies = []
 
 [project.scripts]
-jot = "jot.main:main"
+jotty = "jotty.main:main"
 
 [build-system]
 requires = ["uv_build>=0.12.8,<0.13"]
@@ -39,7 +39,7 @@ extend-select = [
 testpaths = "tests"
 addopts = [
     "--durations=5",
-    "--cov=src/jot",
+    "--cov=src/jotty",
     "--cov-branch",
     "--random-order",
 ]
